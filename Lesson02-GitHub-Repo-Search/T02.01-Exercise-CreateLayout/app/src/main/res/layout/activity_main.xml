@@ -35,7 +35,7 @@
     <!-- (8) Give the EditText an id of @+id/et_search_box-->
     <!-- (9) Set the text size to 22sp-->
     <!-- (10) Set the width to match_parent and the height to wrap_content-->
-    <!--TODO (11) Provide a hint telling the user to enter a query and then click search-->
+    <!-- (11) Provide a hint telling the user to enter a query and then click search-->
     <EditText
         android:id="@+id/et_search_box"
         android:hint="@string/type_a_query_for_github"
@@ -43,12 +43,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!--TODO (12) Add a TextView-->
-    <!--TODO (13) Give the TextView an id of @+id/tv_url_display-->
-    <!--TODO (14) Set the text size to 22sp-->
-    <!--TODO (15) Set the width to wrap_content and the height to wrap_content-->
-    <!--TODO (16) Give the TextView a top margin of 8dp-->
+    <!-- (12) Add a TextView-->
+    <!-- (13) Give the TextView an id of @+id/tv_url_display-->
+    <!-- (14) Set the text size to 22sp-->
+    <!-- (15) Set the width to wrap_content and the height to wrap_content-->
+    <!-- (16) Give the TextView a top margin of 8dp-->
     <!--TODO (17) Set the text to tell the user their search URL will show up here when they click search-->
+    <TextView
+        android:id="@+id/tv_url_display"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <!--TODO (18) Add a ScrollView-->
     <!--TODO (19) Set the width to match_parent and the height to wrap_content-->
