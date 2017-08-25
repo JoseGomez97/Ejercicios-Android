@@ -26,6 +26,8 @@ import com.example.android.datafrominternet.utilities.NetworkUtils;
 
 import java.net.URL;
 
+import static com.example.android.datafrominternet.utilities.NetworkUtils.getResponseFromHttpUrl;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText mSearchBoxEditText;
@@ -55,8 +57,13 @@ public class MainActivity extends AppCompatActivity {
         String githubQuery = mSearchBoxEditText.getText().toString();
         URL githubSearchUrl = NetworkUtils.buildUrl(githubQuery);
         mUrlDisplayTextView.setText(githubSearchUrl.toString());
-        // TODO (2) Call getResponseFromHttpUrl and display the results in mSearchResultsTextView
-        // TODO (3) Surround the call to getResponseFromHttpUrl with a try / catch block to catch an IOException
+        // (2) Call getResponseFromHttpUrl and display the results in mSearchResultsTextView
+        try {
+            mSearchResultsTextView.setText(NetworkUtils.getResponseFromHttpUrl(githubSearchUrl));
+        } catch (Exception e) {
+            // (3) Surround the call to getResponseFromHttpUrl with a try / catch block to catch an IOException
+            e.printStackTrace();
+        }
     }
 
     @Override
